@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/24393a9fef.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <a href="#"><i class="fa-solid fa-globe"></i>Online Code Editor</a>
+            </div>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="about_us.html"><i class="fa-solid fa-address-card"></i>About Us</a></li>
+                <li><a href="contact_form.html"><i class="fa-solid fa-address-book"></i>Contact</a></li>
+                <button><a href="register.html">Sign Up</a></button>
+                <button><a href="login.html">Login</a></button>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="Maincontainer">
+        <div class="left">
+            <label><i class="fa-brands fa-html5"></i> HTML :</label>
+            <textarea id="htmlcode" onkeyup="run()"></textarea>
+
+            <label><i class="fa-brands fa-css"></i> CSS :</label>
+            <textarea id="csscode" onkeyup="run()"></textarea>
+
+            <label><i class="fa-brands fa-js"></i> JavaScript :</label>
+            <textarea id="jscode" onkeyup="run()"></textarea>
+
+        </div>
+        <div class="right">
+            <label><i class="fa-solid fa-play"></i> Output :</label>
+            <iframe id="output"></iframe>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="socialicon">
+            <ul>
+                <li><a href="https://www.instagram.com/__adi.tya_gaikwad__/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/aditya-gaikwad-940470258/"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/adityagikw"><i class="fa-brands fa-github"></i></a></li>
+            </ul>
+        </div>
+        <div class="footernav">
+            <li><a href="#">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="contact_form.html">Contact</a></li>
+        </div>
+        <div class="footerbottom">
+            <p>Copyright &copy;2025 Designed by <span class="designer">Aditya Gaikwad</span></p>
+        </div>
+    </div>
+
+    <script>
+        function run()
+        {
+            let htmlcode = document.getElementById("htmlcode").value;
+            let csscode = document.getElementById("csscode").value;
+            let jscode = document.getElementById("jscode").value;
+            let output = document.getElementById("output");
+
+            output.contentDocument.body.innerHTML = htmlcode + "<style>" + csscode + "</style>";
+            output.contentWindow.eval(jscode);
+        }
+        function register() {
+            document.getElementById("login").style.left = "-500px";
+            document.getElementById("register").style.right = "4px";
+        }
+
+        function login() {
+            document.getElementById("login").style.left = "4px";
+            document.getElementById("register").style.right = "-500px";
+        }
+
+    </script>
+
+</body>
+</html>
