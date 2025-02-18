@@ -5,6 +5,6 @@ Features:<br>
 ✅ Responsive UI with modern design <br>
 ✅ Contact form for user interaction <br>
 <br>
-🔗 Technologies Used: HTML, CSS, JavaScript, FontAwesome <br>
+🔗 Technologies Used: HTML, CSS, JavaScript<br>
 <br>
 Let me know if you need any modifications! 🚀
